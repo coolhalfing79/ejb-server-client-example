@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<client description="new client">
+    <featureManager>
+        <feature>javaeeClient-7.0</feature>
+        <feature>appSecurityClient-1.0</feature>
+    </featureManager>
+    <keyStore id="defaultKeyStore" password="secret" />
+
+    <orb id="defaultOrb" nameService="corbaname::${CORBA_HOST:ejbserver}:${CORBA_PORT:2819}" >
+        <clientPolicy.clientContainerCsiv2>
+            <layers>
+                <authenticationLayer user="user1" password="change1me" />
+            </layers>
+        </clientPolicy.clientContainerCsiv2>
+    </orb>
+    <application id="ejbclient" name="ejbclient" type="ear" location="ejbclient-ear.ear" />
+</client>

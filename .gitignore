@@ -1,0 +1,6 @@
+**/target
+
+#ignore eclipse nonsense
+**/.classpath
+**/.project
+**/.settings
